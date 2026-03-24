@@ -1,4 +1,6 @@
 allure*
+allure-files/
+allure-report/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

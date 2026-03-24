@@ -26,6 +26,7 @@
 ### Полезные ссылки:
 - [Подсазка по Markdown](https://www.markdownguide.org/cheat-sheet/)
 - [Генератор файла .gitignore](https://www.toptal.com/developers/gitignore/)
+- [финальный проект по ручному тестированию](https://qa1142skypro.yonote.ru/share/1997b178-b556-4739-aaa6-ad54793d5e40)
 
 ### Библтотеки
 - pip install pytest

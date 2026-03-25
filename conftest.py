@@ -3,7 +3,7 @@ from selenium import webdriver
 import allure
 
 
-@pytest.fixture
+@pytest.fixture(scope="session")
 def browser():
     with allure.step("Открыть и настроить браузер"):
         options = webdriver.ChromeOptions()

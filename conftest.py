@@ -1,9 +1,12 @@
 import pytest
 from selenium import webdriver
 import allure
+import os
+import requests
+from dotenv import load_dotenv
 
 
-@pytest.fixture(scope="session")
+@pytest.fixture()
 def browser():
     with allure.step("Открыть и настроить браузер"):
         options = webdriver.ChromeOptions()
@@ -14,3 +17,19 @@ def browser():
         yield driver
     with allure.step("Закрыть браузер"):
         driver.quit()
+
+
+@pytest.fixture(scope = "session")
+def api_headers():
+    with allure.step("Передать значение токена"):
+        token = os.getenv("token")
+        return {'Content-Type':
+                    'application/json',
+                    'x-api-key': token}
+
+
+@pytest.fixture(scope = "session")
+def base_url():
+    with allure.step("Подставить базовый URL"):
+        return os.getenv("base_url_for_api")
+       
